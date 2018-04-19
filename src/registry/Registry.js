@@ -1762,6 +1762,8 @@ class Registry {
       if (url.split('@').length > 1) {
         let domain = urlDivided.domain;
 
+        if (urlDivided.type != 'user') resolve(true);
+
         // log.log('[Registry] [Registry.Registry.isLegacy] domain: ', domain);
         if (_this.idpLegacyProxyList.hasOwnProperty(domain)) {
 
